@@ -362,9 +362,8 @@
                             <span>Copy</span>
                         </button>
                         <div id="install-code">
-                            if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")<br>
-                            BiocManager::install(version = "3.21")<br>
-                            if (!require("devtools", quietly = TRUE)) install.packages("devtools")<br>
+                            if (!require("devtools", quietly = TRUE)) 
+                            &nbsp;&nbsp;install.packages("devtools")<br>
                             devtools::install_github('eugenekwaNeuromics/masmr')
                         </div>
                     </div>
@@ -397,9 +396,7 @@
         
         // Copy installation code function
         function copyInstallCode() {
-            const codeText = `if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-BiocManager::install(version = "3.21")
-if (!require("devtools", quietly = TRUE)) install.packages("devtools")
+            const codeText = `if (!require("devtools", quietly = TRUE)) install.packages("devtools")
 devtools::install_github('eugenekwaNeuromics/masmr')`;
             
             navigator.clipboard.writeText(codeText).then(() => {
